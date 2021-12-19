@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+string greetings(int time) {
+	if ((time >= 0) && (time <= 11)) {
+		return "Good Morning";
+	}
+	else if ((time >= 12) && (time <=17)) {
+		return "Good Afternoon";
+	}
+	else if ((time >= 18) && (time <= 21)) {
+		return "Good Evening";
+	}
+	else if ((time >= 22) && (time <= 24)) {
+		return "Good Night :)";
+	}
+	else {
+		return "That is not a time.";
+	}
+}
+
+int main() {
+
+	cout << "What time is it?" << endl;
+	int userTime;
+	cin >> userTime;
+	cout << endl;
+	while(cin.fail()) {
+		cout << "Invalid input, Try again:" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits < streamsize > ::max());
+		cin >> userTime;
+	}
+
+	cout << greetings(userTime) << endl;
+}

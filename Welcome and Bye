@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+void welcome();
+void end();
+void welcome() {
+	cout << "Welcome to my program." << endl;
+}
+void end() {
+	cout << "End of Program." << endl;
+}
+int main() {
+	welcome();
+	cout << endl;
+	end();
+}
